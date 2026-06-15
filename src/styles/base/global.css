@@ -1,0 +1,23 @@
+body {
+
+    background: var(--background-color);
+
+    overflow-x: hidden;
+
+}
+
+.container {
+
+    max-width: var(--container-width);
+
+    margin: auto;
+
+    padding: 0 var(--space-md);
+
+}
+
+.section {
+
+    padding: 96px 0;
+
+}

@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./styles/base/variables.css";
+@import "./styles/base/reset.css";
+@import "./styles/base/typography.css";
+@import "./styles/base/global.css";
