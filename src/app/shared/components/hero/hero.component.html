@@ -1,0 +1,47 @@
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero__inner container">
+    <div class="hero__content">
+      <p class="hero__greeting">Hi, I'm</p>
+      <h1 id="hero-heading" class="hero__name">Adnan Husain Nagori</h1>
+      <p class="hero__role">Senior Frontend Engineer | Angular &amp; React Developer</p>
+      <p class="hero__desc">
+        Frontend developer with 8+ years of experience building scalable enterprise applications using Angular, React, TypeScript and modern web technologies.
+      </p>
+
+      <div class="hero__actions" role="group" aria-label="Hero actions">
+        <a routerLink="/projects" class="btn btn--primary">View Projects</a>
+        <a href="/assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Download Resume</a>
+      </div>
+    </div>
+
+    <div class="hero__visual" aria-hidden="true">
+      <svg class="hero__bg-shapes" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" focusable="false" aria-hidden="true">
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0" stop-color="var(--accent-color, var(--primary-color))" stop-opacity="0.18"/>
+            <stop offset="1" stop-color="var(--primary-color)" stop-opacity="0.06"/>
+          </linearGradient>
+        </defs>
+        <rect x="-10" y="-10" width="820" height="620" fill="url(#g)"></rect>
+        <g class="shapes" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1.2">
+          <circle cx="120" cy="80" r="52" />
+          <rect x="560" y="40" width="160" height="160" rx="14" />
+          <ellipse cx="520" cy="420" rx="200" ry="80" />
+        </g>
+      </svg>
+
+      <div class="code-card" role="img" aria-label="Illustration: stylized code card">
+        <div class="code-card__header">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="code-card__lines">
+          <span class="line l1"></span>
+          <span class="line l2"></span>
+          <span class="line l3"></span>
+          <span class="line l4"></span>
+          <span class="line l5"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

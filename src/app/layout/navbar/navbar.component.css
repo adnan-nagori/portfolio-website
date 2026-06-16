@@ -1,0 +1,200 @@
+:host {
+  --navbar-bg: var(--surface-color);
+  --navbar-text: var(--text-primary);
+  --navbar-muted: var(--text-secondary);
+  --navbar-border: rgba(255, 255, 255, 0.08);
+  --navbar-accent: var(--primary-color);
+  --navbar-radius: var(--radius-md);
+  --navbar-gap: var(--space-md);
+  --navbar-padding: var(--space-sm);
+  --navbar-max-width: var(--container-width);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--navbar-bg);
+  color: var(--navbar-text);
+  border-bottom: 1px solid var(--navbar-border);
+  z-index: 20;
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--navbar-gap);
+  width: 100%;
+  max-width: var(--navbar-max-width);
+  margin: 0 auto;
+  padding: var(--navbar-padding) var(--space-md);
+}
+
+.navbar__brand {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: background 180ms ease, border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.navbar__toggle:hover,
+.navbar__toggle:focus-visible {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.navbar__toggle-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.navbar__icon,
+.navbar__icon::before,
+.navbar__icon::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 180ms ease, opacity 180ms ease;
+  position: relative;
+}
+
+.navbar__icon::before,
+.navbar__icon::after {
+  position: absolute;
+  left: 0;
+}
+
+.navbar__icon::before {
+  top: -6px;
+}
+
+.navbar__icon::after {
+  top: 6px;
+}
+
+.navbar__menu {
+  display: grid;
+  gap: 0.75rem;
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  transition: max-height 220ms ease, opacity 220ms ease,
+    transform 220ms ease;
+  transform: translateY(-8px);
+}
+
+.navbar__menu--open {
+  max-height: 420px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar__item {
+  list-style: none;
+}
+
+.navbar__link {
+  display: block;
+  width: 100%;
+  padding: calc(var(--space-sm) / 1.2) var(--space-md);
+  border-radius: var(--navbar-radius);
+  font-size: var(--fs-sm);
+  color: var(--navbar-text);
+  text-decoration: none;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.navbar__link:hover,
+.navbar__link:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  outline: none;
+}
+
+.navbar__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: calc(var(--space-sm) / 1.2) var(--space-md);
+  border-radius: var(--navbar-radius);
+  background: var(--navbar-accent);
+  color: var(--text-primary);
+  font-weight: 700;
+  text-align: center;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.navbar__button:hover,
+.navbar__button:focus-visible {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .navbar__toggle {
+    display: none;
+  }
+
+  .navbar__menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-md);
+    max-height: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .navbar__link,
+  .navbar__button {
+    padding: calc(var(--space-sm) / 1.1) var(--space-sm);
+    width: auto;
+  }
+
+  .navbar__button {
+    min-width: 11rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar__icon,
+  .navbar__icon::before,
+  .navbar__icon::after,
+  .navbar__menu,
+  .navbar__link,
+  .navbar__button {
+    transition: none;
+  }
+}

@@ -2,12 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-experience',
+  selector: 'app-skills',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './experience.component.html',
-  styleUrl: './experience.component.css'
+  templateUrl: './skills.component.html',
+  styleUrl: './skills.component.css'
 })
-export class ExperienceComponent {
+export class SkillsComponent {
 
 }

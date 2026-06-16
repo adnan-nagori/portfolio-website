@@ -49,3 +49,8 @@
     --container-width: 1280px;
 
 }
+:root {
+  --color-surface: #ffffff;
+  --color-on-surface: #0f172a;
+  --color-accent: #0b5cff;
+}
